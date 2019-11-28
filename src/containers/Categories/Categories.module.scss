@@ -1,0 +1,12 @@
+@import '../../assets/styles/theme.scss';
+
+.Categories {
+    display: flex;
+    flex-direction: column;
+}
+
+@include media (">phone") {
+    .Categories {
+        flex-direction: row;
+    }
+}

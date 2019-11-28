@@ -1,0 +1,46 @@
+@import '../../assets/styles/theme.scss';
+
+.CategoryTile {
+    background-color: black;
+
+    img {
+        width: 100%;
+        height: 100%;
+        opacity: 0.75;
+    }
+
+    span {
+        @extend .bold;
+        position: absolute;
+        color: #fff;
+        font-size: 42px;
+        margin: 2rem;
+        z-index: 1;
+    }
+}
+
+@include media ("<=phone") {
+    .CategoryTile:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+@include media (">phone") {
+    .CategoryTile:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    .CategoryTile {
+        span {
+            font-size: 25px;
+        }
+    }
+}
+
+@include media (">=desktop") {
+    .CategoryTile {
+        span {
+            font-size: 42px;
+        }
+    }
+}

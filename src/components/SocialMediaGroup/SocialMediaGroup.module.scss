@@ -1,0 +1,23 @@
+@import '../../assets/styles/theme.scss';
+
+.SocialMediaGroup {
+    display: flex;
+    flex-direction: row;
+}
+
+.SocialMediaGroup > * {
+    border: 1px solid $icon;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    color: $icon;
+
+    &:not(:last-child) {
+        margin-right: 0.5rem;
+    }
+}
+
+.SocialMediaGroup svg {
+    margin: 6px auto;
+    display: block;
+}

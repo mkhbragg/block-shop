@@ -1,0 +1,21 @@
+@import '../../../assets/styles/theme.scss';
+
+.Button {
+    @extend .bold;
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.Button:hover {
+    color: $accent;
+}
+
+.Button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}

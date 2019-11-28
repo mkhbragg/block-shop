@@ -1,0 +1,84 @@
+@import './include-media.scss';
+
+$accent: #FFDB78;
+$disabled: #D6D7D9;
+$icon: #5B6274;
+$neutral: #262930;
+
+// Bold
+@font-face {
+    font-family: "CircularStdBold";
+    src: url("../fonts/CircularStd-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "CircularStdBoldItalic";
+    src: url("../fonts/CircularStd-BoldItalic.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  // Normal
+  @font-face {
+    font-family: "CircularStd";
+    src: url("../fonts/CircularStd-Medium.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "CircularStdItalic";
+    src: url("../fonts/CircularStd-MediumItalic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  // Lighter
+  @font-face {
+    font-family: "CircularStdLight";
+    src: url("../fonts/CircularStd-Book.otf") format("opentype");
+    font-weight: lighter;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "CircularStdLightItalic";
+    src: url("../fonts/CircularStd-BookItalic.otf") format("opentype");
+    font-weight: lighter;
+    font-style: italic;
+  }
+  
+  // Heavy
+  @font-face {
+    font-family: "CircularStdHeavy";
+    src: url("../fonts/CircularStd-Black.otf") format("opentype");
+    font-weight: bolder;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "CircularStdHeavyItalic";
+    src: url("../fonts/CircularStd-BlackItalic.otf") format("opentype");
+    font-weight: bolder;
+    font-style: italic;
+  }
+  
+.bold {
+    font-family: CircularStdBold;
+    .italic {
+        font-family: CircularStdBoldItalic;
+    }
+}
+
+.italic {
+    font-family: CircularStdItalic;
+}
+
+.light {
+    font-family: CircularStdLight;
+    .italic {
+        font-family: CircularStdLightItalic;
+    }
+} 

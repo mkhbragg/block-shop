@@ -1,0 +1,12 @@
+@import './assets/styles/theme.scss';
+
+.App {
+  padding: 0.5rem;
+  font-family: "CircularStd";
+}
+
+@include media (">phone") {
+    .App {
+      padding: 1rem;
+    }
+}

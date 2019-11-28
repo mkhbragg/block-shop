@@ -1,0 +1,16 @@
+@import '../../../assets/styles/theme.scss';
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        height: 13px;
+    }
+}
+
+@include media (">phone") {
+    .Header img {
+        height: 17px;
+    }
+}
