@@ -7,7 +7,7 @@ import SocialMediaGroup from '../SocialMediaGroup/SocialMediaGroup';
 const footer = () => (
     <Aux>
         <div>
-            <img src={logo} />
+            <img src={logo} alt="Block Shop" />
             <span>Copyright Block Shop 2019</span>
             <span>All Rights Reserved</span>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Aux from '../hoc/Aux/Aux';
+
 import classes from './SocialMediaGroup.module.scss';
 
 const socialMediaGroup = () => (

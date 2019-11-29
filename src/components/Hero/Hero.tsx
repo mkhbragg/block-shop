@@ -15,7 +15,7 @@ const hero = () => (
                 <div className={`${classes.Subtitle} ${classes.Small}`}>Be sure that your purchase is verified and secure on blockchain with the cryptocurrency EOS.</div>
                 <Search />
             </div>
-            <img className={classes.HeroImage} src={HeroImage} />
+            <img className={classes.HeroImage} src={HeroImage} alt="Chair" />
         </div>
     </div>
 );
