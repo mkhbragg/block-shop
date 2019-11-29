@@ -1,10 +1,118 @@
-.Carousel {
+@import '../../assets/styles/theme.scss';
+
+.Arrows {
     display: flex;
     flex-direction: row;
+    margin: auto auto 2rem auto;
+
+    div {
+        border: 1px solid #E8E8E8;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+
+        svg {
+            margin: 17px;
+        }
+    }
+
+    div:first-child {
+        margin-right: 1rem;
+    }
 }
 
-.Tiles {
+.Carousel {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 4rem 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.Controls {
+    background-color: white;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.Large {
+    display: none;
+}
+
+.Small {
+    display: inherit;
+}
+
+.Large, .Small {
+    margin: 3rem auto auto auto;
+}
+
+.ScrollingArea {
     width: 50%;
+
+    .Tiles {
+        left: 0;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        transition: left 0.5s;
+    
+        img:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+}
+
+.Subtitle {
+    margin: 2rem 0;
+    font-size: 14px;
+}
+
+.Title {
+    font-size: 40px;
+}
+
+@include media (">phone") {
+    .Arrows {
+        margin: 0;
+    }
+
+    .Carousel {
+        flex-direction: row;
+    }
+
+    .Controls {
+        text-align: left;
+        padding: 0 3rem;
+    }
+
+    .Large, .Small {
+        margin: 3rem auto auto 0;
+    }
+
+    .Large {
+        display: inherit;
+    }
+
+    .Small {
+        display: none;
+    }
+
+    .Subtitle {
+        font-size: 20px;
+    }
+
+    .Title {
+        font-size: 42px;
+    }
+}
+
+@include media (">tablet") {
+    .Controls {
+        padding: 0 6rem;
+    }
 }

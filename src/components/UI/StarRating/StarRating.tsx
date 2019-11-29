@@ -2,15 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import classes from './StarRating.module.scss';
-
 const starRating = (props: any) => {
-    console.log(props);
     let stars = [...Array(props.total)].map((item, i) => {
-        return <span className={i < props.rating ? 'filled': ''}><FontAwesomeIcon icon="star" /></span>;
+        return <span><FontAwesomeIcon style={ i < props.rating ? {color: '#262930'} : {color: '#D6D7D9'}} icon="star" /></span>;
     });
 
-    return <div className={classes.StarRating}>{stars}</div>
+    return <div>{stars}</div>
 };
 
 starRating.propTypes = {
