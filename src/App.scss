@@ -1,5 +1,9 @@
 @import './assets/styles/theme.scss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   padding: 0.5rem;
   font-family: "CircularStd";
