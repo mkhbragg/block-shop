@@ -113,6 +113,7 @@ class Carousel extends Component<any, any> {
         if (leftOverflow) {
             let leftVal = parseFloat(this.tiles.style.left.split('px')[0]) || 0;
             this.tiles.style.left = `${leftVal + this.tiles.children[0].getBoundingClientRect().width}px`;
+            this.setState({ rightOverflow: false, leftOverflow: false });
         }
     }
 
@@ -121,6 +122,7 @@ class Carousel extends Component<any, any> {
         if (rightOverflow) {
             let leftVal = parseFloat(this.tiles.style.left.split('px')[0]) || 0;
             this.tiles.style.left = `${leftVal - this.tiles.children[0].getBoundingClientRect().width}px`;
+            this.setState({ rightOverflow: false, leftOverflow: false });
         }
     }
 

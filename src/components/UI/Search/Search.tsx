@@ -4,6 +4,11 @@ import Aux from '../../hoc/Aux/Aux';
 import classes from './Search.module.scss';
 
 class Search extends Component<any, any> {
+    constructor(props: any) {
+        super(props)
+        this.input = React.createRef(); 
+    }
+    input: any;
     state = {
         search: ''
     }
@@ -32,13 +37,16 @@ class Search extends Component<any, any> {
                     search: `?keywords=${encodeURIComponent(this.state.search)}`
                 });
             }
-        }     
+        }
+        window.scrollTo(0, this.input.offsetTop);
     }
 
     render () {
         return (
             <Aux>
                 <input
+                    id="SearchBar"
+                    ref={ (ref) => this.input = ref }
                     className={classes.Search}
                     type="text"
                     placeholder="Search"

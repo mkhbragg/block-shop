@@ -11,11 +11,11 @@
 }
 
 .ProductTile {
-    border: 1px solid transparent;
+    border-bottom: 3px solid transparent;
 }
 
 .ProductTile:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 3px solid black;
     cursor: pointer;
 }
 
