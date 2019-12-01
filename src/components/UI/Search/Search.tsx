@@ -37,8 +37,8 @@ class Search extends Component<any, any> {
                     search: `?keywords=${encodeURIComponent(this.state.search)}`
                 });
             }
+            window.scrollTo(0, this.input.offsetTop);
         }
-        window.scrollTo(0, this.input.offsetTop);
     }
 
     render () {
