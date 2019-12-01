@@ -1,19 +1,20 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './App.scss';
-import Categories from './containers/Categories/Categories';
-import Hero from './components/Hero/Hero';
-import Footer from './components/Footer/Footer';
-import Carousel from './containers/Carousel/Carousel';
+import LandingPage from './containers/LandingPage/LandingPage';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Hero />
-      <Carousel />
-      <Categories />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Switch>
+          <Route path="/search" component={LandingPage} />
+          <Route path="/" exact component={LandingPage} />
+          <Route render={() => <h1>Not Found</h1>} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 

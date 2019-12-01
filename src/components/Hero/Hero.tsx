@@ -5,7 +5,7 @@ import classes from './Hero.module.scss';
 import HeroImage from '../../assets/photos/hero.png';
 import Search from '../UI/Search/Search';
 
-const hero = () => (
+const hero = (props: any) => (
     <div className={classes.Hero}>
         <Header />
         <div className={classes.Content}>
@@ -13,7 +13,7 @@ const hero = () => (
                 <span className={classes.Title}>A new way to shop safely</span>
                 <div className={`${classes.Subtitle} ${classes.Large}`}>We’re a service that’s supported on blockchain by the cryptocurrency EOS, so you can be sure that our sellers are trusted and verified.</div>
                 <div className={`${classes.Subtitle} ${classes.Small}`}>Be sure that your purchase is verified and secure on blockchain with the cryptocurrency EOS.</div>
-                <Search />
+                <Search {...props} />
             </div>
             <img className={classes.HeroImage} src={HeroImage} alt="Chair" />
         </div>

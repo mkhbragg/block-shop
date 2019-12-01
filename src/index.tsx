@@ -1,14 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faSearch, faArrowRight, faArrowLeft, faStar } from '@fortawesome/free-solid-svg-icons';
-
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
-library.add(fab, faSearch, faArrowLeft, faArrowRight, faStar);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

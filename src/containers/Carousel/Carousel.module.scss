@@ -10,10 +10,16 @@
         border-radius: 50%;
         height: 50px;
         width: 50px;
+        text-align: center;
 
-        svg {
-            margin: 17px;
+        img {
+            margin-top: 1rem;
         }
+    }
+
+    div.enabled:hover {
+        background-color: #E8E8E8;
+        cursor: pointer;
     }
 
     div:first-child {
@@ -51,7 +57,6 @@
 }
 
 .ScrollingArea {
-    width: 50%;
 
     .Tiles {
         left: 0;
@@ -60,10 +65,15 @@
         flex-direction: row;
         width: 100%;
         transition: left 0.5s;
-    
-        img:not(:last-child) {
-            margin-right: 1rem;
-        }
+    }
+
+    .Tiles > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Tiles > div:not(:last-child) {
+        margin-right: 1rem;
     }
 }
 
@@ -100,6 +110,10 @@
 
     .Small {
         display: none;
+    }
+
+    .ScrollingArea {
+        width: 50%;
     }
 
     .Subtitle {
