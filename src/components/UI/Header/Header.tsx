@@ -1,13 +1,13 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import logo from '../../../assets/logo-block-shop.png';
+import logo from '../../../assets/icons/block-shop-logo.svg';
+import search from '../../../assets/icons/search.svg';
 import classes from './Header.module.scss';
 
 const header = () => (
     <div className={classes.Header}>
-        <img src={logo} alt="Block Shop" />
-        <FontAwesomeIcon icon="search"></FontAwesomeIcon>
+        <img className={classes.Logo} src={logo} alt="Block Shop" />
+        <img className={classes.Search} src={search} alt="search" />
     </div>
 );
 

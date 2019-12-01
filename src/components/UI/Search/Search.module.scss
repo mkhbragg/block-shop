@@ -1,0 +1,18 @@
+@import '../../../assets/styles/theme.scss';
+
+.Search {
+    @extend .light;
+    height: 4rem;
+    text-indent: 4rem;
+    font-size: 18px;
+    background: white url('../../../assets/icons/search-placeholder.svg') 1rem no-repeat;
+    width: calc(100% - 0.5rem);
+    border: 1px solid #DBDBDB;
+}
+
+.Icon {
+    position: absolute;
+    padding: 0.75rem 0.5rem 0.4rem 0.5rem;
+    background-color:white;
+    margin: 1px;
+}

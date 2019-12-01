@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from '../../assets/logo-block-shop.png';
+import logo from '../../assets/icons/block-shop-logo.svg';
 import Aux from '../hoc/Aux/Aux';
 import SocialMediaGroup from '../SocialMediaGroup/SocialMediaGroup';
 

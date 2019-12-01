@@ -3,14 +3,22 @@
 .Header {
     display: flex;
     justify-content: space-between;
+}
 
-    img {
-        height: 13px;
-    }
+.Logo {
+    height: 13px;
+}
+
+.Search {
+    height: 24px;
 }
 
 @include media (">phone") {
-    .Header img {
+    .Logo {
         height: 17px;
+    }
+
+    .Search {
+        margin-right: 2rem;
     }
 }

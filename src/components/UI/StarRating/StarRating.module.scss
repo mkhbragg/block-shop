@@ -1,0 +1,12 @@
+.Star {
+    height: 13px;
+}
+
+.Star:not(:last-child) {
+    margin-right: 0.25rem;
+}
+
+.Stars {
+    display: flex;
+    flex-direction: row;
+}
