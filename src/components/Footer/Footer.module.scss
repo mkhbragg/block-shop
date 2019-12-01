@@ -1,0 +1,85 @@
+@import '../../assets/styles/theme.scss';
+
+.Footer {
+    padding: 4rem 2rem;
+
+    .FinePrint {
+        @extend .light;
+        font-size: 12px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 4rem;
+
+        span:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .Heading {
+        @extend .bold;
+        font-size: 18px;
+    }
+
+    .Large {
+        display: none;
+    }
+
+    .LogoContainer {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .Row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+
+    .Section {
+        display: flex;
+        flex-direction: column;
+
+        p:not(.Heading) {
+            @extend .light;
+            margin-top: 0;
+            font-size: 16px;
+        }
+    }
+    
+    .Small {
+        display: inherit;
+    }
+}
+
+@include media (">tablet") {
+    .Footer {
+        padding: 6rem;
+        display: flex;
+        justify-content: space-between;
+
+        .FinePrint {
+            text-align: left;
+        }
+
+        .Heading {
+            margin-top: 0;
+        }
+
+        .Large {
+            display: inherit;
+        }
+
+        .Section {
+            padding: 0 3rem;
+        }
+
+        .Section:last-child {
+            padding-right: 0;
+        }
+    
+        .Small {
+            display: none;
+        }
+    }
+}
