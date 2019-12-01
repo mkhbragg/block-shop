@@ -55,6 +55,8 @@ class Carousel extends Component<any, any> {
 
     getQueryParams () {
         if ( this.props.match.path === '/search' ) {
+
+            // get keywords from query params
             let keywords: any;
             const query: any = new URLSearchParams(this.props.location.search);
             for (let param of query.entries()) {
@@ -63,6 +65,7 @@ class Carousel extends Component<any, any> {
                 }
             }
 
+            // update state if the search keywords have changed
             if (!this.state.keywords || (this.state.keywords && (this.state.keywords.join('') !== keywords.join('')))) {
                 let filtered = TILES.filter(product => {
                     let includes = false;
@@ -88,20 +91,14 @@ class Carousel extends Component<any, any> {
         return keywords.split(' ');
     }
 
+    // update overflow state according to the direction in which product tiles exceed the width of the bounding box
     updateOverflow () {
         if (this.state.products.length > 0) {
-            let rightOverflow = false;
-            let leftOverflow = false;
             let lastChild = this.tiles.children[this.tiles.children.length - 1].getBoundingClientRect();
             let firstChild = this.tiles.children[0].getBoundingClientRect();
-    
-            if (lastChild.x + lastChild.width > this.scrollingArea.getBoundingClientRect().right) {
-                rightOverflow = true;
-            }
-    
-            if (firstChild.x < this.scrollingArea.getBoundingClientRect().left) {
-                leftOverflow = true;
-            }
+
+            let rightOverflow = lastChild.x + lastChild.width > this.scrollingArea.getBoundingClientRect().right;
+            let leftOverflow = firstChild.x < this.scrollingArea.getBoundingClientRect().left;
     
             this.setState({ rightOverflow: rightOverflow, leftOverflow: leftOverflow });
         }
@@ -111,6 +108,7 @@ class Carousel extends Component<any, any> {
         console.log('go to shopping page');
     }
 
+    // move carousel one tile to the left
     handleLeftClick = (leftOverflow: boolean) => {
         if (leftOverflow) {
             let leftVal = parseFloat(this.tiles.style.left.split('px')[0]) || 0;
@@ -118,6 +116,7 @@ class Carousel extends Component<any, any> {
         }
     }
 
+    // move carousel one tile to the right
     handleRightClick = (rightOverflow: boolean) => {
         if (rightOverflow) {
             let leftVal = parseFloat(this.tiles.style.left.split('px')[0]) || 0;
@@ -148,7 +147,7 @@ class Carousel extends Component<any, any> {
                 </div>
                 <div className={classes.ScrollingArea} ref={(container) => { this.scrollingArea = container; }}>
                     <div className={classes.Tiles} ref={(tiles) => { this.tiles = tiles; }}>
-                        {tiles.length > 0 ? tiles : null}
+                        { tiles.length > 0 ? tiles : <p>No products found matching '{this.state.keywords.join(' ')}'.</p> }
                     </div>
                 </div>
                 <span className={classes.Small}><Button clicked={this.shopHandler}>Shop Now</Button></span>

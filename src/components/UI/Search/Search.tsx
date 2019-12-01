@@ -12,7 +12,9 @@ class Search extends Component<any, any> {
         // populate search with existing keywords
         const query: any = new URLSearchParams(this.props.location.search);
         for (let param of query.entries()) {
-            this.setState({ search: param[1] });
+            if (param[0] === 'keywords') {
+                this.setState({ search: param[1] });
+            }
         }
     }
 
@@ -22,7 +24,6 @@ class Search extends Component<any, any> {
 
     handleKeyPress = (event: any) => {
         if (event.key === 'Enter') {
-            console.log('enter press here! ')
             if (this.state.search === '') {
                 this.props.history.push('/');
             } else {

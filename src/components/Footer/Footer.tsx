@@ -11,7 +11,6 @@ class Footer extends Component<any, any> {
 
     componentDidMount() {
         this.updateWindow();
-        // add resize event listener
         window.addEventListener('resize', this.updateWindow.bind(this));
     }
     
