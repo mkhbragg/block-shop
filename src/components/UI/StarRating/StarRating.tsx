@@ -7,7 +7,7 @@ import classes from './StarRating.module.scss';
 
 const starRating = (props: any) => {
     let stars = [...Array(props.total)].map((item, i) => {
-        return i < props.rating ? <img className={classes.Star} src={star} /> : <img className={classes.Star} src={starDisabled} />;
+        return i < props.rating ? <img className={classes.Star} src={star} alt="star" /> : <img className={classes.Star} src={starDisabled} alt="star" />;
     });
 
     return <div className={classes.Stars}>{stars}</div>
