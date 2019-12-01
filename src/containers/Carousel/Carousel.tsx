@@ -54,16 +54,16 @@ class Carousel extends Component<any, any> {
     }
 
     getQueryParams () {
-        if ( this.props.match.path === '/search' ) {
-
-            // get keywords from query params
-            let keywords: any;
-            const query: any = new URLSearchParams(this.props.location.search);
-            for (let param of query.entries()) {
-                if (param[0] === 'keywords') {
-                    keywords = param[1].split(' ');
-                }
+        // get keywords from query params
+        let keywords: any;
+        const query: any = new URLSearchParams(this.props.location.search);
+        for (let param of query.entries()) {
+            if (param[0] === 'keywords') {
+                keywords = param[1].split(' ');
             }
+        }
+
+        if ((this.props.match.path === '/search') && keywords !== undefined) {
 
             // update state if the search keywords have changed
             if (!this.state.keywords || (this.state.keywords && (this.state.keywords.join('') !== keywords.join('')))) {
