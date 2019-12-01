@@ -1,7 +1,7 @@
-# Block.one-specific Notes:
-* As a proof-of-concept, the search feature applies to the list of most popular products. In the real deal, I imagine we might want to route to an 'All Products' page and filter those results based on the search.
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Block.one-specific Notes:
+* As a proof-of-concept, the search feature applies to the list of most popular products. In the real deal, I imagine we might want to route to an 'All Products' page and filter those results based on the search.
 
 ## Available Scripts
 
