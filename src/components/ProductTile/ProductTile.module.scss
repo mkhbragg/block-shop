@@ -1,16 +1,21 @@
 @import '../../assets/styles/theme.scss';
 
-.ProductImage {
-    width: 160px;
-}
-
 .Cost {
+    @extend .light;
     font-size: 16px;
     margin: 0.5rem 0;
 }
 
+.ProductImage {
+    width: 160px;
+}
+
+.ProductTile {
+    border: 1px solid transparent;
+}
+
 .ProductTile:hover {
-    background-color: rgba(#e8e8e8, 0.5);
+    border-bottom: 1px solid black;
     cursor: pointer;
 }
 

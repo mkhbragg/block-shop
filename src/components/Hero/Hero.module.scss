@@ -24,6 +24,8 @@
         @extend .light;
         padding: 2rem 0;
         font-size: 18px;
+        line-height: 2rem;
+        padding-bottom: 4rem;
     }
 
     .Subtitle.Large {
@@ -31,7 +33,7 @@
     }
 
     .Title {
-        @extend .bold;
+        @extend .light;
         font-size: 40px;
     }
 }

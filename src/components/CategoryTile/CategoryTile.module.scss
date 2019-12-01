@@ -10,12 +10,19 @@
     }
 
     span {
-        @extend .bold;
+        @extend .light;
         position: absolute;
         color: #fff;
         font-size: 42px;
         margin: 2rem;
         z-index: 1;
+    }
+}
+
+.CategoryTile:hover {
+    img {
+        opacity: 0.85;
+        cursor: pointer;
     }
 }
 
